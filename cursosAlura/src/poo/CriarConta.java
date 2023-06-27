@@ -5,18 +5,13 @@ public class CriarConta {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Conta primeiraConta = new Conta();
+		Conta conta = new Conta();
 		
-		primeiraConta.saldo = 200;
-		
-		System.out.println(primeiraConta.saldo);
-		
-		
-		Conta segundaConta = new Conta();
-		segundaConta.saldo = 50;
-		
-		System.out.println(segundaConta.saldo);
-		
+		conta.deposita(50.0);
+		System.out.println(conta.saldo);
+		conta.saca(40.0);
+		System.out.println(conta.saldo);
+		conta.saca(100.0);
 	}
 
 }
