@@ -1,6 +1,6 @@
 package javaPilha;
 
-public class Fluxo {
+public class FluxoComEro {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
@@ -12,7 +12,7 @@ public class Fluxo {
         System.out.println("Ini do metodo1");
         try {
         metodo2();
-        } catch (Exception  e) {
+        } catch (ArithmeticException  | NullPointerException | MinhaExcecao e) {
         	String msg = e.getMessage();
 			System.out.println("ArithmeticException " + msg);
         	e.printStackTrace();
@@ -21,10 +21,10 @@ public class Fluxo {
     }
 
     private static void metodo2() {
-    	 System.out.println("Ini do metodo2");
-         
-         throw new MinhaExcecao("Deu errado");
-         
-         //System.out.println("Fim do metodo2");
+        System.out.println("Ini do metodo2");
+        
+        throw new MinhaExcecao("Deu errado");
+        
+        //System.out.println("Fim do metodo2");
     }
 }
